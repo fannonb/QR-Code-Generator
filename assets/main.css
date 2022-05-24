@@ -1,0 +1,90 @@
+
+
+*{
+    font-family: 'Montserrat';
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: linear-gradient(to right top, #4b6c9d, #556dbf, #7a66d9, #b053e6, #eb12e2);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow:hidden;
+}
+
+.wrapper{
+    background:#fff;
+    max-width:500px;
+    border-radius:15px;
+    padding: 15px;
+    height: 250px;
+    transition: height 0.2s ease-in;
+}
+
+.wrapper.active{
+height: 530px;
+}
+
+.qr-code img{
+    width: 200px;
+    height: auto;
+}
+
+header h1{
+    font-size:25px;
+    font-weight: 600;
+    text-align: center;
+}
+header p{
+    font-size:16px;
+    color:rgb(129, 37, 37);
+    margin-top:10px;
+    text-align: center;
+}
+
+.wrapper .form{
+    margin:20px 0 30px;
+}
+
+.form :where(input, button){
+    width:100%;
+    height:55px;
+    border:none;
+    outline:none;
+    border-radius: 10px;;
+}
+
+.form input{
+    font-size:16px;
+    padding: 10px 17px;
+    border: 1px solid rgb(68, 65, 65);
+    margin-bottom: 10px;
+}
+
+.form button{
+    background:#4B6C9D;
+    color:#fff;
+    cursor:pointer;
+}
+
+.wrapper .qr-code{
+    padding: 33px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:1px solid #ccc;
+    opacity:0;
+    pointer-events: none;
+}
+
+.wrapper.active .qr-code{
+    opacity:1;
+    pointer-events: auto;
+    transition: opacity 0.5s ease;
+}
